@@ -43,7 +43,7 @@ history.pushState = function(args) {
 
 wrapper.style.filter = "grayscale(100%)";
 
-const tools = document.getElementsByClassName('tooltips')[0];
+const tooltips = document.getElementsByClassName('tooltips')[0];
 const tip = document.createElement('div');
 tip.setAttribute('class', 'tooltip tooltip-bottom tooltip-black');
 tip.innerHTML = 'Memes';
@@ -53,13 +53,13 @@ wrapper.addEventListener('mouseover', function() {
   wrapper.style.cursor = "pointer";
   const loc = wrapper.getBoundingClientRect();
   tip.style = `left: ${loc.left - 21}px; top: 58px;`;
-  tools.appendChild(tip);
+  tooltips.appendChild(tip);
 });
 wrapper.addEventListener('mouseout', function() {
   if(!document.getElementById('memesList')) {
     wrapper.style.filter = "grayscale(100%)";
   }
-  tools.removeChild(tip);
+  tooltips.removeChild(tip);
 });
 
 const request = require('request');
