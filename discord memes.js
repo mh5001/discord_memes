@@ -25,7 +25,6 @@ document.body.addEventListener('click', function(target) {
 });
 
 wrapper.appendChild(img);
-wrapper.style = "margin-right: 50px";
 
 const wait = setTimeout(function() {
   clearTimeout(wait);
@@ -52,7 +51,7 @@ wrapper.addEventListener('mouseover', function() {
   wrapper.style.filter = "grayscale(0%)";
   wrapper.style.cursor = "pointer";
   const loc = wrapper.getBoundingClientRect();
-  tip.style = `left: ${loc.left - 21}px; top: 58px;`;
+  tip.style = `left: ${loc.left - 21}px; top: 58px;position: absolute;`;
   tooltips.appendChild(tip);
 });
 wrapper.addEventListener('mouseout', function() {
